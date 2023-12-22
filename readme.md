@@ -4,7 +4,7 @@
 ## How the task was performed
 
 The task was performed using VS Code. In this section, I'll outline the steps taken to create a C++ program that parses accelerometer data from a log file, converts it into Roll and Pitch angles using an aerospace rotation sequence, and ultimately stores this information in an output file.\
-My initial focus was on developing a C++ program dedicated to parsing data extracted from the log file named 'attitude_exam.log.' To accomplish this, I began by creating a 'SensorData' struct to encapsulate the information present in the log file. Within the 'main{}' function, I instantiated 'data' to initialize this structure.\
+My initial focus was on developing a C++ program dedicated to parsing data extracted from the log file named "attitude_exam.log" To accomplish this, I began by creating a "SensorData" struct to encapsulate the information present in the log file. Within the "main{}" function, I instantiated "data" to initialize this structure.\
 ```  
 struct  SensorData {
 long  long  time_stamp_ms;
