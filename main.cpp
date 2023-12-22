@@ -5,14 +5,16 @@
 #include <cmath>
 
 
-// Function to calculate roll angle
+// Function to calculate roll angle 'aerospace rotation sequence' Eq.25
 double calculateRoll(double accel_x, double accel_y, double accel_z) {
     return atan2(accel_y, accel_z);
+    //return atan2(accel_y, accel_z)*180/M_PI; // convert radian to degree if wanted !change it to degree on line 68!
 }
 
-// Function to calculate pitch angle
+// Function to calculate pitch angle 'aerospace rotation sequence' Eq.26
 double calculatePitch(double accel_x, double accel_y, double accel_z) {
     return atan2(-accel_x, sqrt(accel_y * accel_y + accel_z * accel_z));
+    //return atan2(-accel_x, sqrt(accel_y * accel_y + accel_z * accel_z))*180/M_PI; //return atan2(accel_y, accel_z)*180/M_PI; // convert radian to degree if wanted  !change it to degree on line 68!
 }
 
 
