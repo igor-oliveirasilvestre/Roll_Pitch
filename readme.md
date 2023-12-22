@@ -61,7 +61,7 @@ If the exe was run correctly, this should generate a txt file called "attitude_r
 - Pitch angle
 ## User notes
 
-- In the start of the main function, it is checked if there are any streams open to the log file and the output file. If present, the program will exit will treat as an exception and stop.
+- In the start of the main function, it is checked if there are any streams open to the log file and the output file. If present, the program will treat as an exception and stop.
 - During lines 66:69 I convert the accelerometer data from mili g-units to g-units before calling the Roll and Pitch calculations functions. If the accelerometer used in your project already gives accelerations in native units of g remove those lines.
 - I've decided to write the output file with Roll and Pitch angles using radians, if you so desire, I've written alternate calculations formulas on both "CalculateRoll" and "CalculatePitch" that returns those angles using degrees. To use them, comment out both of each function first return line (line 10 and 16) and remove the starting comment on lines 11 and 17.
 
