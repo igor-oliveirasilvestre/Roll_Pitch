@@ -81,7 +81,7 @@ int main() {
     inputFile.close();
     outputFile.close();
 
-    // Print parsed data as an example
+    // Print on terminal parsed data as an example
     /*
     for (const auto& data : sensorDataList) {
         std::cout << "Time: " << data.time_stamp_ms << " ms, Accel X: " << data.accel_x

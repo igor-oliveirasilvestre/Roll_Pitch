@@ -43,11 +43,11 @@ After computing both angles, the final step was to record them in an output file
 
 ## How to compile and run the code
 
-I'll start this sections by briefly stating the software used during development:
-- Visual Studio Code
-- g++ Version
+I'll start this section by briefly stating the software used during development:
+- Visual Studio Code: Version 1.85.1
+- g++ Compiler: Version 13.2.0, installed separately.
 
-I wrote and compiled using VS Code, but given that the user has a C++ compiler, like g++, the program can be compiled by opening a terminal on the same folder as the "main.cpp" archive and give the terminal the following prompt:
+I wrote and compiled using VS Code, but given that the user has a C++ compiler, like g++, the program can be compiled by opening a terminal on the same folder as the "main.cpp" and "attitude_exam.log" files and giving the terminal the following prompt:
 ```
 g++ -o main.exe main.cpp
 ```
@@ -55,9 +55,17 @@ This should generate an exe file called "main.exe" which can be run by giving th
 ```
 ./main
 ```
-
+If the exe was run correctly, this should generate a txt file called "attitude_result.txt" with the following informations: 
+- Timestamp
+- Roll angle
+- Pitch angle
 ## User notes
 
 - In the start of the main function, it is checked if there are any streams open to the log file and the output file. If present, the program will exit will treat as an exception and stop.
 - During lines 66:69 I convert the accelerometer data from mili g-units to g-units before calling the Roll and Pitch calculations functions. If the accelerometer used in your project already gives accelerations in native units of g remove those lines.
-- I've decided to write the output file with Roll and Pitch angles using radians, if you so desire, I've written alternate calculations formulas on both "CalculateRoll" and "CalculatePitch" that returns those angles using degrees. To use them, comment out both of each function first return line (line 10 and 16) and remove the comment on the second
+- I've decided to write the output file with Roll and Pitch angles using radians, if you so desire, I've written alternate calculations formulas on both "CalculateRoll" and "CalculatePitch" that returns those angles using degrees. To use them, comment out both of each function first return line (line 10 and 16) and remove the starting comment on lines 11 and 17.
+
+
+## Contact Info
+If you've come across this project and have any questions about it I'd be happy to help, reach out to me on:
+- igor.oliveirasilvestre95@gmail.com
